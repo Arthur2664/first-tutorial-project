@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsa0qmhl0rdy1"]
+
+[ext_resource type="Script" path="res://actors/player_character.gd" id="1_s7u35"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts3p2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6qq5"]
+
+[node name="player_character" type="CharacterBody3D"]
+script = ExtResource("1_s7u35")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ts3p2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_j6qq5")

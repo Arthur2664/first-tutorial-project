@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv6hoovfp4f6y"]
+[gd_scene load_steps=5 format=3 uid="uid://dv6hoovfp4f6y"]
 
 [ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://objects/box.tscn" id="1_lecyn"]
+[ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://actors/player_character.tscn" id="1_lyh71"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_v0n5t"]
 size = Vector3(10, 0.5, 10)
@@ -20,32 +21,19 @@ mesh = SubResource("BoxMesh_v0n5t")
 shape = SubResource("BoxShape3D_f1h6u")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -6, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 6)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.581413, 0.813608, 0, -0.813608, 0.581413, 0, 5.15588, 3.97207)
+transform = Transform3D(1, 0, 0, 0, 0.582123, 0.8131, 0, -0.8131, 0.582123, 0, 5.156, 6)
 shadow_enabled = true
 
-[node name="Box" parent="." instance=ExtResource("1_lecyn")]
+[node name="player_character" parent="." instance=ExtResource("1_lyh71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.931055, 0)
+
+[node name="falling_blocks" type="Node3D" parent="."]
+
+[node name="Box" parent="falling_blocks" instance=ExtResource("1_lecyn")]
 transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 4.88227, 0)
 
-[node name="Box2" parent="." instance=ExtResource("1_lecyn")]
+[node name="Box2" parent="falling_blocks" instance=ExtResource("1_lecyn")]
 transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 6.79509, 0)
-
-[node name="Box3" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 8.84567, 0)
-
-[node name="Box4" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 10.7585, 0)
-
-[node name="Box5" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 12.7017, 0)
-
-[node name="Box6" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 14.6145, 0)
-
-[node name="Box7" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 16.6651, 0)
-
-[node name="Box8" parent="." instance=ExtResource("1_lecyn")]
-transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 18.5779, 0)
