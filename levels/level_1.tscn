@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dv6hoovfp4f6y"]
+[gd_scene load_steps=6 format=3 uid="uid://dv6hoovfp4f6y"]
 
-[ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://objects/box.tscn" id="1_lecyn"]
-[ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://actors/player_character.tscn" id="1_lyh71"]
+[ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://objects/box/box.tscn" id="1_lecyn"]
+[ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://actors/player_character/player_character.tscn" id="1_lyh71"]
+[ext_resource type="PackedScene" uid="uid://q3vi4nnjoaf1" path="res://objects/coin/coin.tscn" id="3_m4k4b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_v0n5t"]
 size = Vector3(10, 0.5, 10)
@@ -28,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 0.582123, 0.8131, 0, -0.8131, 0.582123, 0, 5
 shadow_enabled = true
 
 [node name="player_character" parent="." instance=ExtResource("1_lyh71")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.931055, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.931055, 2.37049)
 
 [node name="falling_blocks" type="Node3D" parent="."]
 
@@ -37,3 +38,6 @@ transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0,
 
 [node name="Box2" parent="falling_blocks" instance=ExtResource("1_lecyn")]
 transform = Transform3D(1, 0, 0, 0, 0.65416, 0.756356, 0, -0.756356, 0.65416, 0, 6.79509, 0)
+
+[node name="Coin" parent="." instance=ExtResource("3_m4k4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43206, 2.51983)
