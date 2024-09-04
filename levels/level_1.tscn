@@ -27,15 +27,9 @@ mesh = SubResource("BoxMesh_v0n5t")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
 shape = SubResource("BoxShape3D_f1h6u")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 6)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.582123, 0.8131, 0, -0.8131, 0.582123, 0, 5.156, 6)
 shadow_enabled = true
-
-[node name="player_character" parent="." instance=ExtResource("1_lyh71")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.931055, 2.37049)
 
 [node name="falling_blocks" type="Node3D" parent="."]
 
@@ -50,3 +44,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43206, 2.51983)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("4_df1qi")
+
+[node name="player_character" parent="." instance=ExtResource("1_lyh71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22629, 1.14004, 0.608749)
