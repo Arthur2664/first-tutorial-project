@@ -25,4 +25,5 @@ project/assembly_name="FirstTutorialProject"
 
 [rendering]
 
+anti_aliasing/quality/screen_space_aa=1
 rendering_device/run_on_separate_thread=false
