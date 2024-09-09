@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dv6hoovfp4f6y"]
 
-[ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://objects/box/box.tscn" id="1_lecyn"]
-[ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://actors/player_character/player_character.tscn" id="1_lyh71"]
-[ext_resource type="PackedScene" uid="uid://q3vi4nnjoaf1" path="res://objects/coin/coin.tscn" id="3_m4k4b"]
-[ext_resource type="Environment" uid="uid://btk0cm556l84s" path="res://levels/sky_enviroment_res.tres" id="4_df1qi"]
+[ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://Objects/Box/Box.tscn" id="1_lecyn"]
+[ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://Actors/PlayerCharacter/PlayerCharacter.tscn" id="1_lyh71"]
+[ext_resource type="PackedScene" uid="uid://q3vi4nnjoaf1" path="res://Objects/Coin/Coin.tscn" id="3_m4k4b"]
+[ext_resource type="Environment" uid="uid://btk0cm556l84s" path="res://Levels/SkyEnviromentRes.tres" id="4_df1qi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq3jk"]
 albedo_color = Color(0, 0.0833333, 1, 1)

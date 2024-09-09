@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ci0dpepclpkv0"
-path="res://.godot/imported/Sevillana-Regular.ttf-9824a7109025dfc3e48ef27bf4984168.fontdata"
+path="res://.godot/imported/Sevillana-Regular.ttf-272149c071d5831a7aabe64be73694ab.fontdata"
 
 [deps]
 
-source_file="res://fonts/Sevillana-Regular.ttf"
-dest_files=["res://.godot/imported/Sevillana-Regular.ttf-9824a7109025dfc3e48ef27bf4984168.fontdata"]
+source_file="res://Fonts/Sevillana-Regular.ttf"
+dest_files=["res://.godot/imported/Sevillana-Regular.ttf-272149c071d5831a7aabe64be73694ab.fontdata"]
 
 [params]
 

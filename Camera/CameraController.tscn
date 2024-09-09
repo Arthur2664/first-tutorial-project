@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceauadj6hdjvp"]
+
+[ext_resource type="Script" path="res://Camera/CameraController.cs" id="1_x2iis"]
+
+[node name="CameraController" type="Node3D"]
+auto_translate_mode = 1
+script = ExtResource("1_x2iis")
+
+[node name="CameraTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.882628, 0.470073, 0, -0.470073, 0.882628, 0, 2.18994, 4.02268)
+
+[node name="Camera3D" type="Camera3D" parent="CameraTarget"]
+transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0)
+current = true

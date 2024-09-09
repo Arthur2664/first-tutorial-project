@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsa0qmhl0rdy1"]
+
+[ext_resource type="Script" path="res://Actors/PlayerCharacter/PlayerCharacter.cs" id="1_ttxxo"]
+[ext_resource type="PackedScene" uid="uid://ceauadj6hdjvp" path="res://Camera/CameraController.tscn" id="2_jv7t7"]
+[ext_resource type="PackedScene" uid="uid://bnpil17yvatdt" path="res://Rules/Gravity/Gravity.tscn" id="3_h66i8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip4sd"]
+albedo_color = Color(0.216667, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ts3p2"]
+material = SubResource("StandardMaterial3D_ip4sd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6qq5"]
+
+[node name="PlayerCharacter" type="CharacterBody3D"]
+script = ExtResource("1_ttxxo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ts3p2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_j6qq5")
+
+[node name="CameraController" parent="." node_paths=PackedStringArray("targetCharacter") instance=ExtResource("2_jv7t7")]
+targetCharacter = NodePath("..")
+
+[node name="Gravity" parent="." node_paths=PackedStringArray("characterBody") instance=ExtResource("3_h66i8")]
+characterBody = NodePath("..")
