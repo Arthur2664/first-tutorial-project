@@ -9,8 +9,6 @@ public partial class PlayerCharacter : CharacterBody3D
 	{
 		Vector3 velocity = Velocity;
 
-
-
 		// Handle Jump.
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 		{
