@@ -47,3 +47,5 @@ environment = ExtResource("4_df1qi")
 
 [node name="player_character" parent="." instance=ExtResource("1_lyh71")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22629, 1.14004, 0.608749)
+
+[connection signal="body_entered" from="Coin" to="Coin" method="HandleBodyEntered"]

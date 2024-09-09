@@ -2,8 +2,8 @@ using Godot;
 
 public partial class PlayerCharacter : CharacterBody3D
 {
-	public const float Speed = 5.0f;
-	public const float JumpVelocity = 4.5f;
+	private const float Speed = 5.0f;
+	private const float JumpVelocity = 4.5f;
 
 	public override void _PhysicsProcess(double delta)
 	{

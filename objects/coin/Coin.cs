@@ -19,7 +19,7 @@ public partial class Coin : Area3D
 
 #pragma warning disable IDE0060 // Remove unused parameter
 
-    private void HadleBodyEntered(Node3D node3D) => QueueFree();
+    private void HandleBodyEntered(Node3D node3D) => QueueFree();
 #pragma warning restore IDE0060 // Remove unused parameter
 
 }
