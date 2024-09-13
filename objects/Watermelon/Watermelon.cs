@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Coin : Area3D
+public partial class Watermelon : Area3D
 {
 #pragma warning disable IDE0060 // Remove unused parameter
 

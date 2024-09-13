@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2p8dl15fnvrl"]
+
+[ext_resource type="ArrayMesh" uid="uid://cctyp0iiatktr" path="res://Objects/Watermelon/Watermelon.res" id="1_fvuss"]
+[ext_resource type="Script" path="res://Objects/Watermelon/Watermelon.cs" id="1_mt21e"]
+[ext_resource type="PackedScene" uid="uid://b6s8f716l6ykp" path="res://Rules/Rotation/Rotation.tscn" id="2_usv7l"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q3lkg"]
+radius = 0.136575
+
+[node name="Watermelon" type="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_mt21e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0120555, -0.131105, 0)
+mesh = ExtResource("1_fvuss")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0148596, -0.0145668, 0)
+shape = SubResource("SphereShape3D_q3lkg")
+
+[node name="Rotation" parent="." node_paths=PackedStringArray("TargetNode") instance=ExtResource("2_usv7l")]
+RotationSpeed = 2.0
+TargetNode = NodePath("..")
+
+[connection signal="body_entered" from="." to="." method="HandleBodyEntered"]
