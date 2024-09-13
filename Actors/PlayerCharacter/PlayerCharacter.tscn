@@ -21,8 +21,9 @@ mesh = SubResource("BoxMesh_ts3p2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_j6qq5")
 
-[node name="CameraController" parent="." node_paths=PackedStringArray("targetCharacter") instance=ExtResource("2_jv7t7")]
-targetCharacter = NodePath("..")
+[node name="CameraController" parent="." node_paths=PackedStringArray("TargetCharacter") instance=ExtResource("2_jv7t7")]
+TargetCharacter = NodePath("..")
+LookAroundSpeed = 0.01
 
 [node name="Gravity" parent="." node_paths=PackedStringArray("characterBody") instance=ExtResource("3_h66i8")]
 characterBody = NodePath("..")
