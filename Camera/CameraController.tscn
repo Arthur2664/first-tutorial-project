@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceauadj6hdjvp"]
+[gd_scene load_steps=3 format=3 uid="uid://ceauadj6hdjvp"]
 
 [ext_resource type="Script" path="res://Camera/CameraController.cs" id="1_x2iis"]
+[ext_resource type="PackedScene" uid="uid://c3frwr2eekom4" path="res://Rules/RotateWithMouse/RotateWithMouse.tscn" id="2_ns07h"]
 
 [node name="CameraController" type="Node3D"]
 auto_translate_mode = 1
@@ -10,5 +11,8 @@ script = ExtResource("1_x2iis")
 transform = Transform3D(1, 0, 0, 0, 0.882628, 0.470073, 0, -0.470073, 0.882628, 0, 2.18994, 4.02268)
 
 [node name="Camera3D" type="Camera3D" parent="CameraTarget"]
-transform = Transform3D(1, 0, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, -8.9407e-08, 0, 8.9407e-08, 1, 0, 0, 0)
 current = true
+
+[node name="RotateWithMouse" parent="." node_paths=PackedStringArray("TargetCharacter") instance=ExtResource("2_ns07h")]
+TargetCharacter = NodePath("..")

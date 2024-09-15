@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3frwr2eekom4"]
+
+[ext_resource type="Script" path="res://Rules/RotateWithMouse/RotateWithMouse.cs" id="1_hnq1l"]
+
+[node name="RotateWithMouse" type="Node3D"]
+script = ExtResource("1_hnq1l")
