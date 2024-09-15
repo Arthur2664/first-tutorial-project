@@ -30,3 +30,5 @@ characterBody = NodePath("..")
 
 [node name="RotateWithMouse" parent="." node_paths=PackedStringArray("TargetCharacter") instance=ExtResource("4_1amwn")]
 TargetCharacter = NodePath("..")
+
+[node name="FloorAlignRay" type="RayCast3D" parent="."]
