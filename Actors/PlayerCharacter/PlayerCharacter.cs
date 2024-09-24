@@ -24,6 +24,11 @@ public partial class PlayerCharacter : CharacterBody3D
 		{
 			velocity.Y = this.JumpVelocity;
 		}
+		else
+		{
+			this.AlignWithFloor(Vector3.Up);
+			this.Transform = this.Transform.InterpolateWith(this.xForm, 0.3f);
+		}
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
