@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpexgxfrnsrse"]
+
+[ext_resource type="Script" path="res://Rules/KillCam/KillCam.cs" id="1_w0dqc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bxygo"]
+size = Vector3(101.92, 4.39453, 169.6)
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.87564, 0)
+script = ExtResource("1_w0dqc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04791, 1.69727, -15.4056)
+shape = SubResource("BoxShape3D_bxygo")
+
+[connection signal="body_entered" from="." to="." method="HandleBodyEntered"]

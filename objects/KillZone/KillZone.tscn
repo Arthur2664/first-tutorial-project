@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brj5xavylrthf"]
+
+[ext_resource type="Script" path="res://Objects/KillZone/KillZone.cs" id="1_iks4u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0si88"]
+size = Vector3(119.46, 7.35455, 189.215)
+
+[node name="KillZone" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64308, -14.3739, 2.59925)
+script = ExtResource("1_iks4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.46781, 3.17728, -12.7543)
+shape = SubResource("BoxShape3D_0si88")
+
+[connection signal="body_entered" from="." to="." method="HandleBodyEntered"]

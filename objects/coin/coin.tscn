@@ -19,7 +19,7 @@ mesh = ExtResource("2_c8nc7")
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_tfinv")
 
-[node name="Rotation" parent="." node_paths=PackedStringArray("TargetNode") instance=ExtResource("3_6i74i")]
-TargetNode = NodePath("..")
+[node name="Rotation" parent="." node_paths=PackedStringArray("targetNode") instance=ExtResource("3_6i74i")]
+targetNode = NodePath("..")
 
 [connection signal="body_entered" from="." to="." method="HadleBodyEntered"]

@@ -19,8 +19,7 @@ mesh = ExtResource("1_fvuss")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0148596, -0.0145668, 0)
 shape = SubResource("SphereShape3D_q3lkg")
 
-[node name="Rotation" parent="." node_paths=PackedStringArray("TargetNode") instance=ExtResource("2_usv7l")]
-RotationSpeed = 2.0
-TargetNode = NodePath("..")
+[node name="Rotation" parent="." node_paths=PackedStringArray("targetNode") instance=ExtResource("2_usv7l")]
+targetNode = NodePath("..")
 
 [connection signal="body_entered" from="." to="." method="HandleBodyEntered"]
