@@ -1,5 +1,7 @@
 using Godot;
 
+namespace FirstTutorialProject.Objects.Watermelon;
+
 public partial class Watermelon : Area3D
 {
 #pragma warning disable IDE0060 // Remove unused parameter

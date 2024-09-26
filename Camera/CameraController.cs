@@ -1,5 +1,7 @@
 using Godot;
 
+namespace FirstTutorialProject.Camera;
+
 public partial class CameraController : Node3D
 {
 	[Export]

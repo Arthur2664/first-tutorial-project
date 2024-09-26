@@ -1,5 +1,7 @@
 using Godot;
 
+namespace FirstTutorialProject.Rules.Gravity;
+
 public partial class Gravity : Node3D
 {
 	[Export]

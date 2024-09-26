@@ -1,5 +1,7 @@
 using Godot;
 
+namespace FirstTutorialProject.Objects.Coin;
+
 public partial class Coin : Area3D
 {
 #pragma warning disable IDE0060 // Remove unused parameter

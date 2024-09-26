@@ -1,5 +1,7 @@
 using Godot;
 
+namespace FirstTutorialProject.Actors.PlayerCharacter;
+
 public partial class PlayerCharacter : CharacterBody3D
 {
 	private Transform3D xForm;
@@ -12,15 +14,15 @@ public partial class PlayerCharacter : CharacterBody3D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector3 velocity = Velocity;
+		Vector3 velocity = this.Velocity;
 
 		// Handle Jump.
-		if(IsOnFloor())
+		if(this.IsOnFloor())
 		{
 			this.AlignWithFloor(this.GetNode<RayCast3D>("FloorAlignRay").GetCollisionNormal());
 			this.Transform = this.Transform.InterpolateWith(this.xForm, 0.3f);
 		}
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		if (Input.IsActionJustPressed("ui_accept") && this.IsOnFloor())
 		{
 			velocity.Y = this.JumpVelocity;
 		}
@@ -33,7 +35,7 @@ public partial class PlayerCharacter : CharacterBody3D
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
 		Vector2 inputDir = Input.GetVector("MoveLeft","MoveRight", "MoveForward", "MoveBackward");
-		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
+		Vector3 direction = (this.Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
 		
 		if (direction != Vector3.Zero)
 		{
@@ -42,12 +44,12 @@ public partial class PlayerCharacter : CharacterBody3D
 		}
 		else
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, this.Speed);
-			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, this.Speed);
+			velocity.X = Mathf.MoveToward(this.Velocity.X, 0, this.Speed);
+			velocity.Z = Mathf.MoveToward(this.Velocity.Z, 0, this.Speed);
 		}
 
-		Velocity = velocity;
-		MoveAndSlide();
+		this.Velocity = velocity;
+		this.MoveAndSlide();
 	}
 
 	private void AlignWithFloor(Vector3 collisionNormal)
