@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dv6hoovfp4f6y"]
+[gd_scene load_steps=8 format=3 uid="uid://dv6hoovfp4f6y"]
 
 [ext_resource type="PackedScene" uid="uid://bmmfk28a2lis" path="res://Objects/Box/Box.tscn" id="1_lecyn"]
 [ext_resource type="PackedScene" uid="uid://dsa0qmhl0rdy1" path="res://Actors/PlayerCharacter/PlayerCharacter.tscn" id="1_lyh71"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://c2p8dl15fnvrl" path="res://Objects/Watermelon/Watermelon.tscn" id="5_syun6"]
 [ext_resource type="MeshLibrary" uid="uid://cgowpei1kk2e5" path="res://Objects/Blocks/BlocksMeshLibrary.tres" id="6_5ae5x"]
 [ext_resource type="PackedScene" uid="uid://brj5xavylrthf" path="res://Objects/KillZone/KillZone.tscn" id="7_t80dw"]
-[ext_resource type="PackedScene" uid="uid://cpexgxfrnsrse" path="res://Rules/KillCam/KillCam.tscn" id="8_embon"]
 
 [node name="level_1" type="Node3D"]
 
@@ -42,10 +41,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="KillZone" parent="." instance=ExtResource("7_t80dw")]
-
-[node name="KillCam" parent="." node_paths=PackedStringArray("TargetCharacter") instance=ExtResource("8_embon")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.52274, 0)
-TargetCharacter = NodePath("../player_character")
+[node name="Killing Zone" parent="." instance=ExtResource("7_t80dw")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, -2.65217, 0)
 
 [connection signal="body_entered" from="Coin" to="Coin" method="HandleBodyEntered"]

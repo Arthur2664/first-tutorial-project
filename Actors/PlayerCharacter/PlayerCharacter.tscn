@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsa0qmhl0rdy1"]
+[gd_scene load_steps=8 format=3 uid="uid://dsa0qmhl0rdy1"]
 
 [ext_resource type="Script" path="res://Actors/PlayerCharacter/PlayerCharacter.cs" id="1_ttxxo"]
 [ext_resource type="PackedScene" uid="uid://ceauadj6hdjvp" path="res://Camera/CameraController.tscn" id="2_jv7t7"]
 [ext_resource type="PackedScene" uid="uid://bnpil17yvatdt" path="res://Rules/Gravity/Gravity.tscn" id="3_h66i8"]
 [ext_resource type="PackedScene" uid="uid://c3frwr2eekom4" path="res://Rules/RotateWithMouse/RotateWithMouse.tscn" id="4_1amwn"]
-[ext_resource type="PackedScene" uid="uid://cpexgxfrnsrse" path="res://Rules/KillCam/KillCam.tscn" id="5_w58am"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ip4sd"]
 albedo_color = Color(0.216667, 1, 0, 1)
@@ -33,6 +32,3 @@ characterBody = NodePath("..")
 TargetCharacter = NodePath("..")
 
 [node name="FloorAlignRay" type="RayCast3D" parent="."]
-
-[node name="KillCam" parent="." instance=ExtResource("5_w58am")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
